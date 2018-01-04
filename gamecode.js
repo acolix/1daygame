@@ -1,6 +1,6 @@
 var can=document.getElementById("myCanvas");
-can.setAttribute("height",600px);
-can.setAttribute("width",600px);
+can.setAttribute("height","600px");
+can.setAttribute("width","600px");
 
 //document.body.addChildNode(can);
 context=can.getContext("2d")
