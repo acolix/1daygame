@@ -29,7 +29,7 @@ function drawSlope (dh) {
 function drawStraight (x0,y0,slope) {
   var xf=x0 + Math.cos(slope);
   var yf=y0 + Math.sin(slope);
-  var context=c.getContext("2d");
+  var context = can.getContext("2d");
   context.beginPath();
   context.strokeStyle="rgb(0,200,50)";
   context.moveTo(x0,y0);
