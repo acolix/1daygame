@@ -3,7 +3,7 @@ can.setAttribute("height","600px");
 can.setAttribute("width","600px");
 
 //document.body.addChildNode(can);
-context=can.getContext("2d")
+var context=can.getContext("2d")
 context.moveTo(100, 400);
 context.lineTo(200, 400);
 context.lineWidth = 15;
