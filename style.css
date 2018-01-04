@@ -41,18 +41,20 @@ canvas {
   transform: translate(-50%,-50%)
 }
 form {
-  width: 300px;
+  width: 300 px;
   height: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%)
-  transform: translate(0px,-320px)
+  transform: translate(-50%,-50%);
+  transform: translate(0px,-320px);
 
 }
 
 input {
   width: 400px;
-  height: 100px;
+  height: 50px;
+  font-size: 24px; 
+  font-family: monospace;
 
 }
