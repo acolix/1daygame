@@ -27,8 +27,13 @@ function drawSlope (dh) {
   context.stroke();
 }
 function drawStraight (slope) {
+var context=c.getContext("2d");
+context.beginPath();
+context.strokeStyle="rgb(0,200,50)";
+context.moveTo(0,0);
+context.lineTo(200,100);
+context.stroke();
   //write stuff here//
 }
 
-drawSlope(5);
-  
+
