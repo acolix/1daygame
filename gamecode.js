@@ -26,14 +26,16 @@ function drawSlope (dh) {
   
   context.stroke();
 }
-function drawStraight (slope) {
-var context=c.getContext("2d");
-context.beginPath();
-context.strokeStyle="rgb(0,200,50)";
-context.moveTo(0,0);
-context.lineTo(200,100);
-context.stroke();
-  //write stuff here//
+function drawStraight (x0,y0,slope) {
+  var xf=x0 + Math.cos(slope);
+  var yf=y0 + Math.sin(slope);
+  var context=c.getContext("2d");
+  context.beginPath();
+  context.strokeStyle="rgb(0,200,50)";
+  context.moveTo(x0,y0);
+  context.lineTo(xl,yl);
+  context.stroke();
+    //write stuff here//
 }
-
+drawStraight(100,500,math.pi/4)
 
