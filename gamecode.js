@@ -26,5 +26,9 @@ function drawSlope (dh) {
   
   context.stroke();
 }
+function drawStraight {
+  //write stuff here//
+}
+
 drawSlope(5);
   
