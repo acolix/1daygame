@@ -13,4 +13,6 @@ function drawSlope (dh) {
   context.quadraticCurveTo(400,200,250,120);
   
   context.stroke();
+
+drawSlope(5);
   
