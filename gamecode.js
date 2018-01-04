@@ -36,6 +36,6 @@ function drawStraight (x0,y0,slope) {
   context.stroke();
     //write stuff here//
 }
-drawSlope(5)
-drawStraight(100,500,Math.pi/4)
+drawSlope(5);
+drawStraight(100,500,Math.pi/4);
 
