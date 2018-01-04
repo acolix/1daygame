@@ -26,7 +26,7 @@ function drawSlope (dh) {
   
   context.stroke();
 }
-function drawStraight {
+function drawStraight (slope) {
   //write stuff here//
 }
 
