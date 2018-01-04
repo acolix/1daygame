@@ -41,7 +41,7 @@ canvas {
   transform: translate(-50%,-50%)
 }
 form {
-  width: 300 px;
+  width: 300px;
   height: 100px;
   position: absolute;
   top: 50%;
@@ -57,4 +57,5 @@ input {
   font-size: 24px; 
   font-family: monospace;
 
+}
 }
