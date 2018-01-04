@@ -1,4 +1,4 @@
-var can=document.getElementById('canvas');
+var can=document.getElementById("myCanvas");
 document.body.addChildNode(can);
 context=can.getContext('2d')
 context.beginPath();
