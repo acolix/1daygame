@@ -1,9 +1,9 @@
-//var can = document.getElementById('myCanvas');
-var can = document.createElement('canvas');
+var can = document.getElementById('myCanvas');
+//var can = document.createElement('canvas');
 can.setAttribute("height","600px");
 can.setAttribute("width","600px");
 
-document.body.addChildNode(can);
+//document.body.addChildNode(can);
 var context= can.getContext('2d');
 context.beginPath();
 context.moveTo(100, 400);
