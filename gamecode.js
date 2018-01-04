@@ -8,7 +8,7 @@ function drawSlope (dh) {
   context.beginPath();
   context.lineWidth = 15;
   context.strokeStyle="rgb(0,200,50)";
-  context.moveTo(100, 400);
+  context.moveTo(100, 800);
   context.lineTo(200, 400);
   context.quadraticCurveTo(200,100,100,120);
   
