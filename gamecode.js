@@ -37,5 +37,5 @@ function drawStraight (x0,y0,slope) {
     //write stuff here//
 }
 drawSlope(5)
-drawStraight(100,500,math.pi/4)
+drawStraight(100,500,Math.pi/4)
 
