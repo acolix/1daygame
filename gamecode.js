@@ -1,5 +1,5 @@
 //var can = document.getElementById('myCanvas');
-var can = document.createElement('canvas')
+var can = document.createElement('canvas');
 can.setAttribute("height","600px");
 can.setAttribute("width","600px");
 
