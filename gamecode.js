@@ -3,6 +3,17 @@ var can = document.getElementById('myCanvas');
 can.setAttribute("height","600px");
 can.setAttribute("width","600px");
 //document.body.addChildNode(can);
+
+var form = document.createElement('form');
+var input= document.createElement('input');
+input.setAttribute("type","text");
+input.setAttribute("name","word");
+input.setAttribute("value","Enter Word");
+document.body.appendChild(form);
+form.appendChild(input);
+
+document.body.addChildNode(form);
+
 function drawSlope (dh) {
   var context= can.getContext('2d');
   context.beginPath();
