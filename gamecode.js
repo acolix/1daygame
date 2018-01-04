@@ -10,7 +10,7 @@ function drawSlope (dh) {
   context.strokeStyle="rgb(0,200,50)";
   context.moveTo(100, 400);
   context.lineTo(200, 400);
-  context.quadraticCurveTo(400,400,120,120);
+  context.quadraticCurveTo(400,400,300,120);
   
   context.stroke();
 }
