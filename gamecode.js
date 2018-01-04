@@ -1,5 +1,5 @@
 var can=document.getElementById("myCanvas");
-document.body.addChildNode(can);
+//document.body.addChildNode(can);
 context=can.getContext('2d')
 context.beginPath();
 context.moveTo(100, 400);
