@@ -32,7 +32,7 @@ div {
 body {background-color: rgb(60,60,60)}
 
 canvas {
-  background-color: white;
+  background-color: gray;
   width: 80%;
   height: 80%;
   position: absolute;
