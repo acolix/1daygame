@@ -47,7 +47,7 @@ form {
   top: 50%;
   left: 50%;
   /*transform: translate(-50%,-50%);*/
-  transform: translate(0px,-320px);
+  transform: translate(0px,-600px);
 
 }
 
@@ -56,5 +56,4 @@ input {
   height: 50px;
   font-size: 24px; 
   font-family: monospace;
-
 }
