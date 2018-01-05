@@ -23,6 +23,7 @@ var form = document.createElement('form');
 var input= document.createElement('submit');
 document.body.appendChild(form);
 form.appendChild(input);
+var x = form.elements[0].value;
 
 function drawSlope (dh) {
   var context= can.getContext('2d');
