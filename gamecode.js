@@ -35,6 +35,8 @@ function computespeed (word) {
   };
   return(v)
 }
+ctx.font = "30px Arial";
+ctx.fillText(String(computespeed(x)),10,50);
 
 function drawSlope (dh) {
   var context= can.getContext('2d');
