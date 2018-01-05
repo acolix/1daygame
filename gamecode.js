@@ -2,6 +2,7 @@ var can = document.getElementById('myCanvas');
 //var can = document.createElement('canvas');
 //var dycan = document.createElement('canvas');
 //can.setAttribute("height","600px");
+//can.setAttribute("width","600px");
 //dycan.setAttribute("height","600px");
 //dycan.setAttribute("width","600px");
 ctx=can.getContext('2d');
@@ -18,7 +19,7 @@ var form = document.createElement('form');
 var input= document.createElement('input');
 input.setAttribute("type","text");
 input.setAttribute("name","word");
-input.setAttribute("value","Enter Word");
+//input.setAttribute("value","Enter Word");
 document.body.appendChild(form);
 form.appendChild(input);
 
@@ -29,7 +30,8 @@ submit.setAttribute("width","30px");
 form.appendChild(submit);
 var x = form.elements[0].value;
 //Console.write(x);
-function computespeed (word) {
+function computespeed () {
+  var word = form.elements[0].value;
   var alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   var letters = word.split("");
   var v=0;
@@ -37,6 +39,9 @@ function computespeed (word) {
   {
     v+=2**(-alphabet.indexOf(letters[i])/10); //Math.pow(2,-alphabet.indexOf(letters[i])/10);
   };
+  ctx.font = "30px Arial";
+  ctx.fillText(String(v),10,50);
+
   return(v)
 }
 ctx.font = "30px Arial";
@@ -59,7 +64,7 @@ function drawStraight (x0,y0,slope,length) {
   var yf=y0 - length*Math.sin(slope);
   var context = can.getContext('2d');
   context.beginPath();
-  context.lineWidth = 20;
+  context.lineWidth = 30;
   context.strokeStyle="rgb(0,200,50)";
   context.moveTo(x0,y0);
   context.lineTo(xf,yf);
@@ -110,4 +115,14 @@ ball.draw(ctx);
     ball.draw(dyctx);
 };
 renderFrame()*/
-//setInterval(updateCanvas,100)
+function updateCanvas(){
+    ctx.clearRect(0, 0, W, H);
+    vy -= gravity*Math.cos(slope);
+    vx += gravity*Math.sin(slope);
+    ball.x += vx;
+    ball.y += vy;
+    ball.draw(ctx)
+}
+//setInterval(updateCanvas,100
+
+computespeed()
