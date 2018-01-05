@@ -1,10 +1,15 @@
 var can = document.getElementById('myCanvas');
-//var can = document.createElement('canvas');
+ctx=can.getContext('2d');
+var dycan = document.createElement('canvas');
 can.setAttribute("height","600px");
 can.setAttribute("width","600px");
-//document.body.appendChild(can);
-var W = canvas.width = window.innerWidth;
-var H = canvas.height = window.innerHeight;
+dycan.setAttribute("height","600px");
+dycan.setAttribute("width","600px");
+dyctx=dycan.getContext('2d');
+document.body.appendChild(dycan);
+var W = can.width = window.innerWidth;
+var H = can.height = window.innerHeight;
+var slope = Math.PI/4
 
 var form = document.createElement('form');
 var input= document.createElement('input');
@@ -28,9 +33,9 @@ function drawSlope (dh) {
   context.stroke();
 }
 function drawStraight (x0,y0,slope) {
-  var xf=x0 + Math.cos(slope);
-  var yf=y0 - Math.sin(slope);
-  var context = can.getContext("2d");
+  var xf=x0 + 100*Math.cos(slope);
+  var yf=y0 - 100*Math.sin(slope);
+  var context = can.getContext('2d');
   context.beginPath();
   context.lineWidth = 30;
   context.strokeStyle="rgb(0,200,50)";
@@ -40,12 +45,12 @@ function drawStraight (x0,y0,slope) {
     //write stuff here//
 }
 drawSlope(5);
-drawStraight(100,500,Math.pi/4);
+drawStraight(slope);
 
 function Ball() {
     this.radius = 50;
-    this.x = canvas.width / 2;
-    this.y = canvas.height - this.radius - 20;
+    this.x = can.width / 2;
+    this.y = can.height - this.radius - 20;
  
     this.draw = function(ctx) {
         ctx.fillStyle = 'black';
@@ -70,14 +75,14 @@ var gravity = -0.5;
 var v0= 10;
 var vx = v0*Math.cos(slope);
 var vy= -v0*Math.sin(slope);
-(function renderFrame() {
+function renderFrame() {
     requestAnimationFrame(renderFrame);
-    ctx.clearRect(0, 0, W, H);
+    dyctx.clearRect(0, 0, W, H);
     vy -= gravity*Math.cos(slope);
     vx += gravity*Math.sin(slope);
     ball.x += vx;
     ball.y += vy;
     
-    ball.draw(ctx);
-}());
-
+    ball.draw(dyctx);
+};
+renderFrame()
