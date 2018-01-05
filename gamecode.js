@@ -35,7 +35,7 @@ function drawStraight (x0,y0,slope) {
   context.lineWidth = 30;
   context.strokeStyle="rgb(0,200,50)";
   context.moveTo(x0,y0);
-  context.lineTo(xl,yl);
+  context.lineTo(xf,yf);
   context.stroke();
     //write stuff here//
 }
