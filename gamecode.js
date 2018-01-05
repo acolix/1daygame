@@ -23,7 +23,7 @@ var submit = document.createElement("submit");
 submit.setAttribute("type","submit");
 submit.setAttribute("height","30px");
 submit.setAttribute("width","30px");
-form.appendChild(input);
+form.appendChild(submit);
 var x = form.elements[0].value;
 
 function drawSlope (dh) {
