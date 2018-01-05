@@ -9,9 +9,9 @@ ctx=can.getContext('2d');
 //dyctx=dycan.getContext('2d');
 document.body.appendChild(can);
 //document.body.appendChild(dycan);
-var W = can.width = window.innerWidth;
-var H = can.height = window.innerHeight;
-var slope = Math.PI/4
+var W = can.width;
+var H = can.height;
+var slope = Math.PI/4;
 
 var form = document.createElement('form');
 //form.style.position = "relative"
@@ -30,7 +30,8 @@ submit.setAttribute("width","30px");
 form.appendChild(submit);
 var x = form.elements[0].value;
 //Console.write(x);
-function computespeed () {
+function computespeed (e) {
+  e.preventDefault();
   var word = form.elements[0].value;
   var alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   var letters = word.split("");
@@ -43,9 +44,13 @@ function computespeed () {
   ctx.fillText(String(v),10,50);
 
   return(v)
-}
+};
+//form.addEventListener("submit", function (e){if(!isValid){e.preventDefault}});
+form.addEventListener("submit", computespeed);
+
+
 ctx.font = "30px Arial";
-ctx.fillText(String(computespeed(x)),10,50);
+//ctx.fillText(String(computespeed(x)),10,50);
 
 function drawSlope (dh) {
   var context= can.getContext('2d');
@@ -124,5 +129,4 @@ function updateCanvas(){
     ball.draw(ctx)
 }
 //setInterval(updateCanvas,100
-
-computespeed()
+//computespeed()
