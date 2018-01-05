@@ -20,9 +20,8 @@ document.body.appendChild(form);
 form.appendChild(input);
 
 var btn = document.createElement("BUTTON");
-var t = document.createTextNode("CLICK ME");
+var t = document.createTextNode("SUBMIT");
 btn.appendChild(t);
-<button>
 document.body.appendChild(btn);
 var x = form.elements[0].value;
 
