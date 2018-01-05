@@ -3,6 +3,8 @@ var can = document.getElementById('myCanvas');
 can.setAttribute("height","600px");
 can.setAttribute("width","600px");
 //document.body.appendChild(can);
+var W = canvas.width = window.innerWidth;
+var H = canvas.height = window.innerHeight;
 
 var form = document.createElement('form');
 var input= document.createElement('input');
@@ -27,7 +29,7 @@ function drawSlope (dh) {
 }
 function drawStraight (x0,y0,slope) {
   var xf=x0 + Math.cos(slope);
-  var yf=y0 + Math.sin(slope);
+  var yf=y0 - Math.sin(slope);
   var context = can.getContext("2d");
   context.beginPath();
   context.lineWidth = 30;
@@ -39,4 +41,44 @@ function drawStraight (x0,y0,slope) {
 }
 drawSlope(5);
 drawStraight(100,500,Math.pi/4);
+
+function Ball() {
+    this.radius = 50;
+    this.x = canvas.width / 2;
+    this.y = canvas.height - this.radius - 20;
+ 
+    this.draw = function(ctx) {
+        ctx.fillStyle = 'black';
+        ctx.beginPath();
+ 
+        ctx.arc(
+            this.x,
+            this.y,
+            this.radius,
+            0,
+            Math.PI*2,
+            false
+        );
+ 
+        ctx.closePath();
+        ctx.fill();
+    }
+}
+
+var ball = new Ball()
+var gravity = -0.5;
+var v0= 10;
+var vx = v0*Math.cos(slope);
+var vy= -v0*Math.sin(slope);
+for
+(function renderFrame() {
+    requestAnimationFrame(renderFrame);
+    ctx.clearRect(0, 0, W, H);
+    vy -= gravity*Math.cos(slope);
+    vx += gravity*Math.sin(slope);
+    ball.x += vx;
+    ball.y += vy;
+    
+    ball.draw(ctx);
+}());
 
