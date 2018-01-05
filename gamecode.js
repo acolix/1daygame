@@ -23,6 +23,8 @@ var btn = document.createElement("BUTTON");
 var t = document.createTextNode("SUBMIT");
 btn.appendChild(t);
 document.body.appendChild(btn);
+btn.setAttribute("height","30px");
+btn.setAttribute("width","30px");
 var x = form.elements[0].value;
 
 function drawSlope (dh) {
