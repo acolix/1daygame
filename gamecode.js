@@ -26,6 +26,15 @@ submit.setAttribute("width","30px");
 form.appendChild(submit);
 var x = form.elements[0].value;
 
+function computespeed (word) {
+  var alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  var letters = word.split("");
+  var v=0;
+  for (i=1,i<=letters.length,i++){
+    v+=Math.pow(2,-alphabet.indexOf(letters[i])/10)};
+  return(v)
+}
+
 function drawSlope (dh) {
   var context= can.getContext('2d');
   context.beginPath();
