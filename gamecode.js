@@ -19,7 +19,7 @@ input.setAttribute("value","Enter Word");
 document.body.appendChild(form);
 form.appendChild(input);
 
-var submit = document.createElement("submit");
+var submit = document.createElement("input");
 submit.setAttribute("type","submit");
 submit.setAttribute("height","30px");
 submit.setAttribute("width","30px");
