@@ -70,7 +70,6 @@ var gravity = -0.5;
 var v0= 10;
 var vx = v0*Math.cos(slope);
 var vy= -v0*Math.sin(slope);
-for
 (function renderFrame() {
     requestAnimationFrame(renderFrame);
     ctx.clearRect(0, 0, W, H);
