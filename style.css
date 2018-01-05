@@ -1,4 +1,4 @@
-button {
+ button {
   margin:auto;
   display:block;
   /*position: absolute;
@@ -33,10 +33,10 @@ body {background-color: rgb(60,60,60)}
 
 canvas {
   background-color: gray;
-  border: 1px 
-  solid: #FFFFFF;
-  width: 600px;
-  height: 600px;
+  border: 1px;
+  /*solid: #FFFFFF;*/
+  /*width: 600px;
+  height: 600px;*/
   position: fixed;
   top: 50%;
   left: 50%;
