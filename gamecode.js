@@ -30,8 +30,9 @@ function computespeed (word) {
   var alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   var letters = word.split("");
   var v=0;
-  for (i=1,i<=letters.length,i++){
-    v+=Math.pow(2,-alphabet.indexOf(letters[i])/10);
+  for (var i=1;i<=letters.length;i++)
+  {
+    v+=2**(-alphabet.indexOf(letters[i])/10); //Math.pow(2,-alphabet.indexOf(letters[i])/10);
   };
   return(v)
 }
