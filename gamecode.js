@@ -1,17 +1,20 @@
 var can = document.getElementById('myCanvas');
+//var can = document.createElement('canvas');
+//var dycan = document.createElement('canvas');
+//can.setAttribute("height","600px");
+//dycan.setAttribute("height","600px");
+//dycan.setAttribute("width","600px");
 ctx=can.getContext('2d');
-var dycan = document.createElement('canvas');
-can.setAttribute("height","600px");
-can.setAttribute("width","600px");
-dycan.setAttribute("height","600px");
-dycan.setAttribute("width","600px");
-dyctx=dycan.getContext('2d');
-document.body.appendChild(dycan);
+//dyctx=dycan.getContext('2d');
+document.body.appendChild(can);
+//document.body.appendChild(dycan);
 var W = can.width = window.innerWidth;
 var H = can.height = window.innerHeight;
 var slope = Math.PI/4
 
 var form = document.createElement('form');
+//form.style.position = "relative"
+//form.style.top = "-340px"
 var input= document.createElement('input');
 input.setAttribute("type","text");
 input.setAttribute("name","word");
@@ -25,7 +28,7 @@ submit.setAttribute("height","30px");
 submit.setAttribute("width","30px");
 form.appendChild(submit);
 var x = form.elements[0].value;
-
+//Console.write(x);
 function computespeed (word) {
   var alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   var letters = word.split("");
@@ -51,9 +54,9 @@ function drawSlope (dh) {
   
   context.stroke();
 }
-function drawStraight (x0,y0,slope) {
-  var xf=x0 + 100*Math.cos(slope);
-  var yf=y0 - 100*Math.sin(slope);
+function drawStraight (x0,y0,slope,length) {
+  var xf=x0 + length*Math.cos(slope);
+  var yf=y0 - length*Math.sin(slope);
   var context = can.getContext('2d');
   context.beginPath();
   context.lineWidth = 30;
@@ -63,8 +66,6 @@ function drawStraight (x0,y0,slope) {
   context.stroke();
     //write stuff here//
 }
-drawSlope(5);
-drawStraight(slope);
 
 function Ball() {
     this.radius = 50;
@@ -94,7 +95,11 @@ var gravity = -0.5;
 var v0= 10;
 var vx = v0*Math.cos(slope);
 var vy= -v0*Math.sin(slope);
-function renderFrame() {
+drawSlope(5);
+drawStraight(200,500,slope,200);
+ball.draw(ctx);
+
+/*function renderFrame() {
     requestAnimationFrame(renderFrame);
     dyctx.clearRect(0, 0, W, H);
     vy -= gravity*Math.cos(slope);
@@ -104,4 +109,5 @@ function renderFrame() {
     
     ball.draw(dyctx);
 };
-renderFrame()
+renderFrame()*/
+//setInterval(updateCanvas,100)
