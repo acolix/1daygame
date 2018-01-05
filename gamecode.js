@@ -31,7 +31,8 @@ function computespeed (word) {
   var letters = word.split("");
   var v=0;
   for (i=1,i<=letters.length,i++){
-    v+=Math.pow(2,-alphabet.indexOf(letters[i])/10)};
+    v+=Math.pow(2,-alphabet.indexOf(letters[i])/10);
+  };
   return(v)
 }
 
