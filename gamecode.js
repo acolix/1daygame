@@ -19,12 +19,10 @@ input.setAttribute("value","Enter Word");
 document.body.appendChild(form);
 form.appendChild(input);
 
-var btn = document.createElement("BUTTON");
-var t = document.createTextNode("SUBMIT");
-btn.appendChild(t);
-document.body.appendChild(btn);
-btn.setAttribute("height","30px");
-btn.setAttribute("width","30px");
+var submit = document.createElement("submit");
+submit.setAttribute("type","submit");
+submit.setAttribute("height","30px");
+submit.setAttribute("width","30px");
 var x = form.elements[0].value;
 
 function drawSlope (dh) {
