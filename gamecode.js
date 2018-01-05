@@ -20,7 +20,6 @@ document.body.appendChild(form);
 form.appendChild(input);
 
 var input= document.createElement('submit');
-input type="submit" value="Submit"
 var x = form.elements[0].value;
 
 function drawSlope (dh) {
