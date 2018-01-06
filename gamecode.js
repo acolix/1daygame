@@ -141,6 +141,3 @@ function updateCanvas(){
 }
 //setInterval(updateCanvas,100
 //computespeed()
-
-
-
