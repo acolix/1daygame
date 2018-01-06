@@ -130,3 +130,6 @@ function updateCanvas(){
 }
 //setInterval(updateCanvas,100
 //computespeed()
+
+
+function (holeHeight) {/* processing*/  result: draw wall with hole at holeHeight at the right side of the canvas}
