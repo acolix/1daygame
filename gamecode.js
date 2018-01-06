@@ -77,19 +77,18 @@ function drawStraight (x0,y0,slope,length) {
     //write stuff here//
 }
 
-function wall (holeheight, holesize) {
-function drawStraight (x0,y0,slope,length) {
+//function drawStraight (x0,y0,slope,length) {
+function wall (holex,height, holesize) {
   var context = can.getContext('2d');
   context.beginPath();
   context.lineWidth = 20;
   context.strokeStyle="rgb(0,250,50)";
-  context.moveTo(holeheight,0);
-  context.lineTo(holeheight,200);
-  context.moveTo(holeheight,300);
+  context.moveTo(wallx,0);
+  context.LineTo(wallx,holeheight);
+  context.moveTo(wallx,holeheight+holesize);
   context.lineTo(holeheight,600);
   context.stroke();
     //write stuff here//
-}
 }
 
 3
