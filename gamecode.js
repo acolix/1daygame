@@ -69,7 +69,7 @@ function drawStraight (x0,y0,slope,length) {
   var yf=y0 - length*Math.sin(slope);
   var context = can.getContext('2d');
   context.beginPath();
-  context.lineWidth = 30;
+  context.lineWidth = 20;
   context.strokeStyle="rgb(0,200,50)";
   context.moveTo(x0,y0);
   context.lineTo(xf,yf);
