@@ -77,6 +77,17 @@ function drawStraight (x0,y0,slope,length) {
     //write stuff here//
 }
 
+function drawStraight (x0,y0,slope,length) {
+  var context = can.getContext('2d');
+  context.beginPath();
+  context.lineWidth = 60;
+  context.strokeStyle="rgb(0,250,50)";
+  context.moveTo(10,30);
+  context.lineTo(70,90);
+  context.stroke();
+    //write stuff here//
+}
+
 function Ball() {
     this.radius = 50;
     this.x = can.width / 2;
