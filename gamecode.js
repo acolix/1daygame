@@ -80,7 +80,7 @@ function drawStraight (x0,y0,slope,length) {
 function drawStraight (x0,y0,slope,length) {
   var context = can.getContext('2d');
   context.beginPath();
-  context.lineWidth = 10;
+  context.lineWidth = 20;
   context.strokeStyle="rgb(0,250,50)";
   context.moveTo(600,0);
   context.lineTo(600,600);
