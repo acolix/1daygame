@@ -82,8 +82,8 @@ function drawStraight (x0,y0,slope,length) {
   context.beginPath();
   context.lineWidth = 10;
   context.strokeStyle="rgb(0,250,50)";
-  context.moveTo(20,90);
-  context.lineTo(70,90);
+  context.moveTo(600,0);
+  context.lineTo(600,600);
   context.stroke();
     //write stuff here//
 }
