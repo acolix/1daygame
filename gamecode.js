@@ -58,14 +58,6 @@ function drawSlope (dh) {
   
   context.stroke();
 }
-function drawStraight {
- var ctx= c.getContext("2d");
- ctx.beginPath();
- ctx.lineWidth = 10; 
- ctx.moveTo(0,0);
- ctx.lineTo(300,150); 
- ctx.stroke(); 
-}
 
 function drawStraight (x0,y0,slope,length) {
   var xf=x0 + length*Math.cos(slope);
