@@ -77,6 +77,8 @@ function drawStraight (x0,y0,slope,length) {
     //write stuff here//
 }
 
+drawLine(20, 20, 120, 120);
+
 function Ball() {
     this.radius = 20;
     this.x = x0
