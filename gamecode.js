@@ -219,7 +219,7 @@ function spikes (){
   var valleylength = wallx-rampx;
   var baselength = 10;
   var nspikes = valleylength/baselength;
-  for(i=1;i <= nspikes;i++1){;
+  for(i=1;i <= nspikes;i++){
     var x1 = rampx + baselength * (i-1);                         
     triangle(x1,y0, baselength, height);
     
