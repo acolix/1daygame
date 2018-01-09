@@ -213,3 +213,15 @@ function triangle (x1, y1, baselength, height) {
  ctx.lineTo(x1 + baselength, y1);
  ctx.closePath(); 
 }
+
+function spikes (){
+  var height = 100;
+  var valleylength = wallx-rampx;
+  var baselength = 10px;
+  var nspikes = valleylength/baselength;
+  for(i=1;i <= nspikes;i++1){;
+    var x1 = rampx + baselength * (i-1);                         
+    triangle(x1,height);
+    
+}
+}
