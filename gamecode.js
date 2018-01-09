@@ -221,7 +221,7 @@ function spikes (){
   var nspikes = valleylength/baselength;
   for(i=1;i <= nspikes;i++1){;
     var x1 = rampx + baselength * (i-1);                         
-    triangle(x1,height);
+    triangle(x1,y0, baselength, height);
     
 }
 }
