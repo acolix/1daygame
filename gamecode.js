@@ -206,4 +206,10 @@ function launchball(e){
 
 form.addEventListener("submit", launchball)
 
-
+function triangle (x1, y1, baselength, height) {
+ ctx.beginPath();
+ ctx.moveTo(x1,y1);
+ ctx.lineTo(x1 + baselength/2, y1 + height);
+ ctx.lineTo(x1 + baselength, y1);
+ ctx.closePath(); 
+}
