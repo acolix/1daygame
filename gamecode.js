@@ -50,7 +50,7 @@ file.close();
 console.log(str);*/
 function computespeed () {
   var word = form.elements[0].value;
-  var alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  var alphabet=["z","q","x","j","k","v","b","p","y","g","f","w","m","u","c","l","d","r","h","s","n","i","o","a","t","e"];
   var letters = word.split("");
   var v=0;
   for (var i=1;i<=letters.length;i++)
