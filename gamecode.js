@@ -211,7 +211,16 @@ function triangle (x1, y1, baselength, height) {
  ctx.moveTo(x1,y1);
  ctx.lineTo(x1 + baselength/2, y1 + height);
  ctx.lineTo(x1 + baselength, y1);
- ctx.closePath(); 
+ ctx.fillStyle('rgb(150,150,150)');
+ //ctx.strokeStyle('rgb(100,100,100)');
+ ctx.closePath();
+ ctx.fill();
+ ctx.moveTo(x1+baselength/5,y1);
+ ctx.lineTo(x1 + baselength/2, y1 + height);
+ ctx.lineTo(x1 + baselength/3, y1);
+ ctx.closePath();
+ ctx.fillStyle('rgb(200,200,200)');
+ ctx.fill();
 }
 
 function spikes (){
