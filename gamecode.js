@@ -55,7 +55,7 @@ function computespeed () {
   var v=0;
   for (var i=1;i<=letters.length;i++)
   {
-    v += 2**(-alphabet.indexOf(letters[i])/10 + 3000); //Math.pow(2,-alphabet.indexOf(letters[i])/10);
+    v += 2**(-alphabet.indexOf(letters[i])/10 + 30000000); //Math.pow(2,-alphabet.indexOf(letters[i])/10);
   };
   //ctx.font = "30px Arial";
   //ctx.fillText(String(v),10,50);
