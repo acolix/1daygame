@@ -276,7 +276,7 @@ var hit=false
 var score = 0*/
 var v0,vx,vy,hit,score,deathani, lives = 5;
 if (aniended){
-  lives
+  lives;
 }
 
   
@@ -294,7 +294,7 @@ function launchball(e){
   hit=false;
   score = 0;
   if (aniended == false) {
-   lives = lives - 1 
+   lives = lives - 1;
   }
   animation=setInterval(updateCanvas,dt);
   
