@@ -259,7 +259,8 @@ var rampy=rampy0-rampLength*Math.sin(slope);
 var wallx = 500;
 var holesize = 100;
 var holeHeight= 200;
-var gravity = -0.5;
+var gravity = -0.2;
+var dt = 50;
 var cpoints=[[rampx,rampy],[wallx,y0-holeHeight],[wallx,y0-holeHeight-holesize]];
 var animation //= setInterval(updateCanvas,200);
 //clearInterval(animation);
@@ -295,7 +296,7 @@ function launchball(e){
   if (aniended == false) {
    lives = lives - 1 
   }
-  animation=setInterval(updateCanvas,100);
+  animation=setInterval(updateCanvas,dt);
   
   
   //if (ball.y>rampy0){ball.reset(ctx);clearInterval(animation)};
