@@ -55,7 +55,7 @@ function computespeed () {
   var v=0;
   for (var i=1;i<=letters.length;i++)
   {
-    v+=2**(-alphabet.indexOf(letters[i])/10); //Math.pow(2,-alphabet.indexOf(letters[i])/10);
+    v += 2**(-alphabet.indexOf(letters[i])/10); //Math.pow(2,-alphabet.indexOf(letters[i])/10);
   };
   //ctx.font = "30px Arial";
   //ctx.fillText(String(v),10,50);
@@ -240,6 +240,7 @@ function updateCanvas(){        //drawSlope(5);
       ball.draw(ctx,'red');
       ball.flash();
       setTimeout(function(){ball.reset(ctx,true);drawStraight(rampx0,rampy0,slope,rampLength);spikes()},1000);
+      (aniended == true);
       };
 };
 
@@ -272,7 +273,12 @@ var vx = v0*Math.cos(slope);
 var vy= -v0*Math.sin(slope);
 var hit=false
 var score = 0*/
-var v0,vx,vy,hit,score,deathani;
+var v0,vx,vy,hit,score,deathani, lives = 5;
+if (aniended){
+  lives
+}
+
+  
 function launchball(e){
   e.preventDefault();
   ctx.clearRect(0,0,W,H);
@@ -286,7 +292,12 @@ function launchball(e){
   vy= -v0*Math.sin(slope);
   hit=false;
   score = 0;
+  if (aniended == false) {
+   lives = lives - 1 
+  }
   animation=setInterval(updateCanvas,100);
+  
+  
   //if (ball.y>rampy0){ball.reset(ctx);clearInterval(animation)};
 
   //if (ball.y<rampy0){
