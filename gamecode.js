@@ -274,12 +274,8 @@ var vx = v0*Math.cos(slope);
 var vy= -v0*Math.sin(slope);
 var hit=false
 var score = 0*/
-var v0,vx,vy,hit,score,deathani, lives = 5;
-if (aniended){
-  lives;
-}
+var v0,vx,vy,hit,score,deathani, lives = 5, aniended;
 
-  
 function launchball(e){
   e.preventDefault();
   ctx.clearRect(0,0,W,H);
