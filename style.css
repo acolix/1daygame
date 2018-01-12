@@ -32,7 +32,7 @@ div {
 body {background-color: rgb(60,60,60)}
 
 canvas {
-  background-color: gray;
+  /*background-color: gray;*/
   border: 1px;
   /*solid: #FFFFFF;*/
   /*width: 600px;
@@ -42,6 +42,7 @@ canvas {
   left: 50%;
   transform: translate(-50%,-50%);
 }
+/*.table-view-focus { z-index: -10; }*/
 form {
   width: 250px;
   height: 50px;
@@ -64,4 +65,9 @@ input [type="submit"] {
   height: 30px;
   font-size: 12px; 
   font-family: monospace;
+}
+
+img {
+  background-color: gray;
+  /*display:none;
 }
